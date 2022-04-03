@@ -1,0 +1,2 @@
+corpus/language_detection/lid.176.bin filter=lfs diff=lfs merge=lfs -text
+corpus/language_detection/tatoeba/top48_sentences.csv filter=lfs diff=lfs merge=lfs -text
