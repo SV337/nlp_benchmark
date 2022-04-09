@@ -11,6 +11,17 @@ In this repository, we benchmarked:
 
 You can find some results we obtained in the `resources` folder.
 
+## Installation
+
+To run the benchmark yourself, just install the dependencies and run `main.py`:
+
+```bash
+pip install -r requirements.txt
+python3 main.py
+```
+
+The total execution time for the whole benchmark can be very long (a few hours).
+
 ## Developing a new Runner
 
 This benchmark aims to be easily extensible. 

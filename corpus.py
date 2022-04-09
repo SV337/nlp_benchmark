@@ -164,39 +164,6 @@ class LanguageCorpus2(Corpus):
 
 class LanguageCorpus3(Corpus):
     def __init__(self):
-        self.path = "corpus/language_detection/train.csv"
-        self.data = pd.read_csv(self.path)
-        self.errors = {}
-
-    def __len__(self):
-        return len(self.data)
-
-    def __getitem__(self,index):
-        return self.data["text"][index]
-
-    def valid_classification(self, name, idx, value):
-        if value is None:
-            return False
-        value = Language.get(value).to_alpha3()
-        lang = self.data["labels"][idx]
-        code = Language.get(lang).to_alpha3()
-        return code == value
-
-    def print_stats(self):
-        sum_len = 0
-        sum_word = 0
-
-        for content in self.data["text"]:
-            sum_len += len(content)
-            sum_word += len(content.split(" "))
-
-        print("[*] Number of languages: \t\t", 20)
-        print("[*] Number of sentences: \t\t", len(self.data))
-        print("[*] Average length of sentence: \t", sum_len / len(self.data))
-        print("[*] Average number of words: \t\t", sum_word / len(self.data))
-
-class LanguageCorpus4(Corpus):
-    def __init__(self):
         self.path = "corpus/language_detection/tatoeba/top48_sentences.csv"
         self.data = pd.read_csv(self.path)
         self.errors = {}

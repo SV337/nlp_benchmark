@@ -1,2 +1,7 @@
 __pycache__
 venv
+corpus/pdf_files
+corpus/txt_files
+stats/
+results/
+main_text_search.py

@@ -113,7 +113,7 @@ class Evaluator:
     def init_datasets(self):
         self.datasets = {
             "sentiment": corpus.SentimentCorpus(),
-            "language_detection": corpus.LanguageCorpus4(),
+            "language_detection": corpus.LanguageCorpus3(),
             "date_extraction": corpus.DateExtractionCorpus(),
         }
 

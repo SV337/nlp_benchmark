@@ -1,4 +1,4 @@
-from lingua import Language, LanguageDetectorBuilder
+from lingua import LanguageDetectorBuilder
 
 class Runner:
     def prepare(self):
